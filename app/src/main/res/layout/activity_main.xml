@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/green"
+    tools:context="com.example.ian.scorekeeper.MainActivity">
+
+
+    <!--main layout providing division -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!--First Linear Layout -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!--image layout ,top layout (1st Item)-->
+            <LinearLayout
+                android:id="@+id/manuImageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/manu"
+                    android:padding="4dp"
+                    android:src="@drawable/manu" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/manuText"
+                    android:textColor="@color/yellow"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <!--counter view-->
+            <TextView
+                android:id="@+id/manuTextView"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/lightBrown"
+                android:text="@string/counter"
+                android:textAlignment="center"
+                android:textColor="@color/yellow"
+                android:textSize="40sp" />
+
+            <!--Fouls view-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/manuFoulButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/brownDarker"
+                    android:onClick="foulsManu"
+                    android:text="@string/foul" />
+
+                <TextView
+                    android:id="@+id/manuFoul"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/counter"
+                    android:textAlignment="center"
+                    android:textColor="@color/yellow"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            //Penalties
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/manuPenaltyButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/brownDarker"
+                    android:onClick="penaltyButton"
+                    android:text="@string/penalty" />
+
+                <TextView
+                    android:id="@+id/manuPenalty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/counter"
+                    android:textAlignment="center"
+                    android:textColor="@color/yellow"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <!--Goal-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/manuGoalButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/brownDarker"
+                    android:onClick="goalButton"
+                    android:text="@string/goal" />
+
+                <TextView
+                    android:id="@+id/manuGoal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/counter"
+                    android:textAlignment="center"
+                    android:textColor="@color/yellow"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/purple" />
+
+
+        <!--Second Linear Layout-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/mancity"
+                    android:padding="4dp"
+                    android:src="@drawable/mancity" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/mancityText"
+                    android:textColor="@color/yellow"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <!--counter view-->
+            <TextView
+                android:id="@+id/mancityTextView"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/lightBrown"
+                android:text="@string/counter"
+                android:textAlignment="center"
+                android:textColor="@color/yellow"
+                android:textSize="40sp" />
+
+            <!--fouls view-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/mancityFoulButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/brownDarker"
+                    android:onClick="foulsManCity"
+                    android:text="@string/foul" />
+
+                <TextView
+                    android:id="@+id/mancityFoul"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/counter"
+                    android:textAlignment="center"
+                    android:textColor="@color/yellow"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <!--Penalties-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/manCityPenaltyButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/brownDarker"
+                    android:onClick="penaltyManCityButton"
+                    android:text="@string/penalty" />
+
+                <TextView
+                    android:id="@+id/manuCityPenalty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/counter"
+                    android:textAlignment="center"
+                    android:textColor="@color/yellow"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <!--Goal-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/manuCityButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/brownDarker"
+                    android:onClick="goalManCityButton"
+                    android:text="@string/goal" />
+
+                <TextView
+                    android:id="@+id/manuCity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/counter"
+                    android:textAlignment="center"
+                    android:textColor="@color/yellow"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--reset Button-->
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="30dp"
+        android:background="@color/brownDarker"
+        android:text="@string/reset"
+        android:onClick="resetMethod"/>
+
+</RelativeLayout>

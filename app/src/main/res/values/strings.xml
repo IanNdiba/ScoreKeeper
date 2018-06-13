@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Score Keeper</string>
+    <string name="manu">manchesterUnited</string>
+    <string name="mancity">manchesterCity</string>
+    <string name="manuText">Manchester United</string>
+    <string name="mancityText">Manchester City</string>
+    <string name="counter">0</string>
+    <string name="foul">Fouls</string>
+    <string name="penalty">Penalty</string>
+    <string name="goal">Goal</string>
+    <string name="reset">Reset</string>
+
+</resources>
